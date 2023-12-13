@@ -6,10 +6,9 @@
  * @av: the command-line arguments
  * Return: indicates an error
  */
-int main(int ac, char **av)
+int main(__attribute__((unused)) int ac, char **av)
 {
 	char *message, **command;
-	int status;
 
 	if (av[1])
 	{
@@ -31,7 +30,7 @@ int main(int ac, char **av)
 			exit(0);
 		}
 
-		status = exec_cmd(command, message, av);
+		exec_cmd(command, message, av);
 		free(command);
 		free(message);
 	}

@@ -45,7 +45,6 @@ void read_file(char *file_name, char **av)
 void exec_file(char *buffer, FILE *fp, char **av)
 {
 	char **command;
-	int status = 0;
 
 	command = tokenize_cmd(buffer);
 
@@ -54,7 +53,7 @@ void exec_file(char *buffer, FILE *fp, char **av)
 		file_exit(command, buffer, fp);
 	}
 
-	status = exec_cmd(command, buffer, av);
+	exec_cmd(command, buffer, av);
 	free(command);
 
 }
