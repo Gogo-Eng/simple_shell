@@ -10,14 +10,13 @@ char *_getenv(char *name)
 	int i, t, p = 0;
 	size_t name_len, item_len;
 	char *item;
-	
-	
+
 	name_len = _strlen(name);
-	
+
 	i = 0;
-	while(environ[i])
+	while (environ[i])
 	{
-	
+
 
 		if (_strncmp(name, environ[i], name_len) == 0)
 		{
