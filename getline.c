@@ -6,7 +6,7 @@
  */
 char *_getline(void)
 {
-	size_t buffer_size = BUFSIZE, size_t new_buffer_size, size_t r;
+	size_t buffer_size = BUFSIZE, new_buffer_size, r;
 	int cmd = 0;
 	char *buffer = malloc(buffer_size);
 

@@ -24,13 +24,13 @@ char **tokenize_cmd(char *message)
 		return (NULL);
 	}
 
-	token = strtok(message, delim);
+	token = _strtok(message, delim);
 
 	i = 0;
 	while (token)
 	{
 		array[i] = token;
-		token = strtok(NULL, delim);
+		token = _strtok(NULL, delim);
 		i++;
 	}
 	array[i] = NULL;

@@ -1,5 +1,5 @@
-#ifndef MY_SHELL
-#define MY_SHELL
+#ifndef MY__SHELL
+#define MY__SHELL
 
 #include <string.h>
 #include <stdio.h>
@@ -17,6 +17,10 @@
 #define BUFSIZE 1024
 
 extern char **environ;
+
+char *_strtok(char *stri, char *delim);
+char *_strchr(char *str, char c);
+
 
 char **tokenize_cmd(char *message);
 void read_file(char *file_name, char **av);
