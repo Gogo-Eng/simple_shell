@@ -24,7 +24,7 @@ char **tokenize_cmd(char *message)
 		return (NULL);
 	}
 
-	token = _strtok(message, delim);
+	token = strtok(message, delim);
 
 	i = 0;
 	while (token)
