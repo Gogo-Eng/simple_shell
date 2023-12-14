@@ -30,7 +30,7 @@ char **tokenize_cmd(char *message)
 	while (token)
 	{
 		array[i] = token;
-		token = _strtok(NULL, delim);
+		token = strtok(NULL, delim);
 		i++;
 	}
 	array[i] = NULL;
